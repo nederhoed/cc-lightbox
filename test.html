@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<script src="http://172.16.9.198:8080/target/target-script-min.js#anonymous"></script>
+  <head>
+    <title>Lightbox test page</title>
+    <script src="jquery.js"></script>
+    <script src="compat.js"></script>
+    <script src="lightbox.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $('.imagegallery').lightbox();
+        });
+
+    </script>
+    <style>
+
+        .imagegallery {
+            height: 40px;
+            width: 200px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            list-style-type: none;
+        }
+
+        .imagegallery li {
+            display: inline;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+        }
+
+        .imagegallery img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup {
+            position: absolute;
+            width: 220px;
+            height: 360px;
+            z-index: 2;
+        }
+
+        .imagelist-container {
+            width: 200px;
+            overflow-x: scroll;
+            position: relative;
+        }
+
+        .imagelist {
+            width: 1200px;
+            height: 200px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .imageitem {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            padding: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .imageitem img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .navlist-container {
+            width: 200px;
+            overflow-x: scroll;
+            position: relative;
+        }
+
+        .navlist {
+            width: 1200px;
+            height: 200px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navitem {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .navlist img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <ul class="imagegallery">
+      <li>
+        <a href="images/1_small.jpg"><img title="Image 1" src="images/1_thumb.jpg" /></a>
+      </li>
+      <li>
+        <a href="images/2_small.jpg"><img title="Image 2" src="images/2_thumb.jpg" /></a>
+      </li>
+      <li>
+        <a href="images/3_small.jpg"><img title="Image 3" src="images/3_thumb.jpg" /></a>
+      </li>
+      <li>
+        <a href="images/4_small.jpg"><img title="Image 4" src="images/4_thumb.jpg" /></a>
+      </li>
+      <li>
+        <a href="images/5_small.jpg"><img title="Image 5" src="images/5_thumb.jpg" /></a>
+      </li>
+      <li>
+        <a href="images/6_small.jpg"><img title="Image 6" src="images/6_thumb.jpg" /></a>
+      </li>
+    </ul>
+  </body>
+</html>
